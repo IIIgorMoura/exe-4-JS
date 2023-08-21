@@ -89,7 +89,9 @@
         });
 
         function reset() {
-            images.src = IMAGENS[0];
+            imagesIndex = 0;
+            images.src = IMAGENS[imagesIndex];
+
             i = 0;
 
             chances += 2;
@@ -100,6 +102,8 @@
             let op3 = document.getElementById('escolha3').innerHTML = "3";
             let op4 = document.getElementById('escolha4').innerHTML = "4";
         }
+
+
 
         function proxQuest2() {
             images.src = IMAGENS[imagesIndex];
