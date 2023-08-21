@@ -14,7 +14,11 @@
 <body>
     <div class="fundo">
         <section class="base">
-            <div class="questao" id="pergunta">pergunta</div>
+            <div class="questao">
+                <img class="heart" src="coracao.png" alt="">
+                <div id="vidas">2</div>
+                <h1 id="pergunta">pergunta</h1>
+            </div>
 
             <div class="ilustracao"></div>
 
@@ -30,6 +34,38 @@
             </section>
         </section>
     </div>
+
+    <script>
+        let op1 = document.getElementById('escolha1');
+        let op2 = document.getElementById('escolha2');
+        let op3 = document.getElementById('escolha3');
+        let op4 = document.getElementById('escolha4');
+
+        op1.addEventListener("click", () => {
+            op1.classList.add('ativo');
+        });
+
+        op2.addEventListener("click", () => {
+            --chances;
+            document.getElementById('vidas').innerHTML = chances;
+        });
+
+        op3.addEventListener("click", () => {
+            --chances;
+            document.getElementById('vidas').innerHTML = chances;
+        });
+
+        op4.addEventListener("click", () => {
+            --chances;
+            document.getElementById('vidas').innerHTML = chances;
+        });
+
+
+        let chances = 2
+        if (chances < 1) {
+            
+        }
+    </script>
 </body>
 
 </html>
