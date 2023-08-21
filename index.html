@@ -20,22 +20,25 @@
                 <h1 id="pergunta">pergunta</h1>
             </div>
 
-            <div class="ilustracao"></div>
+            <img class="ilustracao" src="image1.png" alt="">
 
             <section class="opcoes">
                 <section class="alinhamento">
-                    <button class="opc" id="escolha1">1</button>
-                    <button class="opc" id="escolha2">2</button>
+                    <button class="opc txt" id="escolha1">1</button>
+                    <button class="opc txt" id="escolha2">2</button>
                 </section>
                 <section class="alinhamento">
-                    <button class="opc" id="escolha3">3</button>
-                    <button class="opc" id="escolha4">4</button>
+                    <button class="opc txt" id="escolha3">3</button>
+                    <button class="opc txt" id="escolha4">4</button>
                 </section>
             </section>
         </section>
     </div>
 
     <script>
+        const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
+        let i = 0;
+
         let op1 = document.getElementById('escolha1');
         let op2 = document.getElementById('escolha2');
         let op3 = document.getElementById('escolha3');
@@ -43,7 +46,16 @@
 
         op1.addEventListener("click", () => {
             op1.classList.add('ativo');
+            // document.getElementById('ilustracao').innerHTML = IMAGENS[1];
+
+            i++;
+
+            if (i = 1) {
+                console.log(i);
+            };
         });
+
+
 
         op2.addEventListener("click", () => {
             --chances;
@@ -63,8 +75,14 @@
 
         let chances = 2
         if (chances < 1) {
-            
+
         }
+
+
+
+
+
+        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
     </script>
 </body>
 
