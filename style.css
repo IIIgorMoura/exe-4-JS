@@ -65,7 +65,7 @@
 
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: wrap;
 
     margin: 25px 0px;
 }
@@ -94,15 +94,6 @@
 .opc:hover {
     transform: scale(1.05);
 }
-
-.alinhamento {
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-
 #vidas {
     display: flex;
     align-items: center;

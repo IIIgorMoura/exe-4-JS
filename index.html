@@ -8,7 +8,6 @@
     <title>Quiz</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -23,14 +22,10 @@
             <img class="ilustracao" id="exibicao" src="image1.png" alt="">
 
             <section class="opcoes">
-                <section class="alinhamento">
-                    <button class="opc txt" id="escolha1">1</button>
-                    <button class="opc txt" id="escolha2">2</button>
-                </section>
-                <section class="alinhamento">
-                    <button class="opc txt" id="escolha3">3</button>
-                    <button class="opc txt" id="escolha4">4</button>
-                </section>
+                <button class="opc txt" id="escolha1">1</button>
+                <button class="opc txt" id="escolha2">2</button>
+                <button class="opc txt" id="escolha3">3</button>
+                <button class="opc txt" id="escolha4">4</button>
             </section>
         </section>
     </div>
@@ -52,41 +47,58 @@
             i++;
             imagesIndex++;
 
-            if (i = 1) {
+            if (i === 1) {
                 proxQuest2();
+            } else if (i === 2) {
+                proxQuest3();
+            } else if (i === 3) {
+                proxQuest4();
+            } else if (i === 4) {
+                proxQuest5();
             };
         });
 
 
+        let chances = 2;
 
         op2.addEventListener("click", () => {
-            --chances;
+            chances--;
             document.getElementById('vidas').innerHTML = chances;
+
+            if (chances < 1) {
+                reset();
+            }
         });
 
         op3.addEventListener("click", () => {
-            --chances;
+            chances--;
             document.getElementById('vidas').innerHTML = chances;
+
+            if (chances < 1) {
+                reset();
+            }
         });
 
         op4.addEventListener("click", () => {
-            --chances;
+            chances--;
             document.getElementById('vidas').innerHTML = chances;
+
+            if (chances < 1) {
+                reset();
+            }
         });
-
-
-        let chances = 2;
-        if (chances = 0) {
-            reset()
-        };
 
         function reset() {
             images.src = IMAGENS[0];
+            i = 0;
+
+            chances += 2;
+            document.getElementById('vidas').innerHTML = chances;
 
             let op1 = document.getElementById('escolha1').innerHTML = "1";
             let op2 = document.getElementById('escolha2').innerHTML = "2";
-            let op3 = document.getElementById('escolha3') = "3";
-            let op4 = document.getElementById('escolha4') = "4";
+            let op3 = document.getElementById('escolha3').innerHTML = "3";
+            let op4 = document.getElementById('escolha4').innerHTML = "4";
         }
 
         function proxQuest2() {
@@ -94,8 +106,8 @@
 
             let op1 = document.getElementById('escolha1').innerHTML = "jose";
             let op2 = document.getElementById('escolha2').innerHTML = "gustavo";
-            let op3 = document.getElementById('escolha3') = "neymar";
-            let op4 = document.getElementById('escolha4') = "carlos";
+            let op3 = document.getElementById('escolha3').innerHTML = "neymar";
+            let op4 = document.getElementById('escolha4').innerHTML = "carlos";
         };
 
         function proxQuest3() {
@@ -103,8 +115,8 @@
 
             let op1 = document.getElementById('escolha1').innerHTML = "arnaldo";
             let op2 = document.getElementById('escolha2').innerHTML = "bernardo";
-            let op3 = document.getElementById('escolha3') = "plinio";
-            let op4 = document.getElementById('escolha4') = "edvandro";
+            let op3 = document.getElementById('escolha3').innerHTML = "plinio";
+            let op4 = document.getElementById('escolha4').innerHTML = "edvandro";
         };
 
         function proxQuest4() {
@@ -112,8 +124,8 @@
 
             let op1 = document.getElementById('escolha1').innerHTML = "gabriel";
             let op2 = document.getElementById('escolha2').innerHTML = "kiko";
-            let op3 = document.getElementById('escolha3') = "edgar";
-            let op4 = document.getElementById('escolha4') = "matheus";
+            let op3 = document.getElementById('escolha3').innerHTML = "edgar";
+            let op4 = document.getElementById('escolha4').innerHTML = "matheus";
         };
 
         function proxQuest5() {
@@ -121,8 +133,8 @@
 
             let op1 = document.getElementById('escolha1').innerHTML = "giovanni";
             let op2 = document.getElementById('escolha2').innerHTML = "galinaceo";
-            let op3 = document.getElementById('escolha3') = "luiz";
-            let op4 = document.getElementById('escolha4') = "pedro";
+            let op3 = document.getElementById('escolha3').innerHTML = "luiz";
+            let op4 = document.getElementById('escolha4').innerHTML = "pedro";
         };
     </script>
 </body>
