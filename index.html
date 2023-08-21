@@ -20,7 +20,7 @@
                 <h1 id="pergunta">pergunta</h1>
             </div>
 
-            <img class="ilustracao" src="image1.png" alt="">
+            <img class="ilustracao" id="exibicao" src="image1.png" alt="">
 
             <section class="opcoes">
                 <section class="alinhamento">
@@ -39,19 +39,21 @@
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
+        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
+        let images = document.getElementById('exibicao');
+        let imagesIndex = 0;
+
         let op1 = document.getElementById('escolha1');
         let op2 = document.getElementById('escolha2');
         let op3 = document.getElementById('escolha3');
         let op4 = document.getElementById('escolha4');
 
         op1.addEventListener("click", () => {
-            op1.classList.add('ativo');
-            // document.getElementById('ilustracao').innerHTML = IMAGENS[1];
-
             i++;
+            imagesIndex++;
 
             if (i = 1) {
-                console.log(i);
+                proxQuest2();
             };
         });
 
@@ -73,16 +75,40 @@
         });
 
 
-        let chances = 2
-        if (chances < 1) {
+        let chances = 2;
+        if (chances = 0) {
+            reset()
+        };
 
+        function reset() {
+            images.src = IMAGENS[0];
+
+            let op1 = document.getElementById('escolha1').innerHTML = "1";
+            let op2 = document.getElementById('escolha2').innerHTML = "2";
+            let op3 = document.getElementById('escolha3') = "3";
+            let op4 = document.getElementById('escolha4') = "4";
         }
 
+        function proxQuest2() {
+            images.src = IMAGENS[imagesIndex];
 
+            let op1 = document.getElementById('escolha1').innerHTML = "jose";
+            let op2 = document.getElementById('escolha2').innerHTML = "gustavo";
+            let op3 = document.getElementById('escolha3') = "neymar";
+            let op4 = document.getElementById('escolha4') = "carlos";
+        };
 
+        function proxQuest3() {
 
+        };
 
-        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
+        function proxQuest4() {
+
+        };
+
+        function proxQuest5() {
+
+        };
     </script>
 </body>
 
