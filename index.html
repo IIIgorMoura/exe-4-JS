@@ -16,7 +16,7 @@
         <section class="base">
             <div class="questao">
 
-                <h1 class="titulo" id="pergunta">pergunta</h1>
+                <h1 class="titulo" id="pergunta">Na equação: x2 + 13 = 19, qual o valor de X?</h1>
             </div>
 
             <section class="alinhamento">
@@ -40,19 +40,19 @@
             <section class="opcoes">
                 <button class="opc txt" id="escolha1">
                     <i class="fas fa-flag"></i>
-                    <p class="txt espacar">1</p>
+                    <p class="txt espacar">3</p>
                 </button>
                 <button class="opc txt" id="escolha2">
                     <i class="fas fa-flag"></i>
-                    <p class="txt espacar">2</p>
+                    <p class="txt espacar">6</p>
                 </button>
                 <button class="opc txt" id="escolha3">
                     <i class="fas fa-flag"></i>
-                    <p class="txt espacar">3</p>
+                    <p class="txt espacar">2</p>
                 </button>
                 <button class="opc txt" id="escolha4">
                     <i class="fas fa-flag"></i>
-                    <p class="txt espacar">4</p>
+                    <p class="txt espacar">7</p>
                 </button>
             </section>
         </section>
@@ -132,12 +132,15 @@
             chances += 2;
             document.getElementById('vidas').innerHTML = chances;
 
-            let quest = document.getElementById('pergunta').innerHTML = "pergunta1";
+            pontos = 0;
+            document.getElementById('pontos').innerHTML = pontos;
 
-            let op1 = document.getElementById('escolha1').innerHTML = "1";
-            let op2 = document.getElementById('escolha2').innerHTML = "2";
-            let op3 = document.getElementById('escolha3').innerHTML = "3";
-            let op4 = document.getElementById('escolha4').innerHTML = "4";
+            let quest = document.getElementById('pergunta').innerHTML = "Na equação: 2x + 13 = 19, qual o valor de X?";
+
+            let op1 = document.getElementById('escolha1').innerHTML = "3";
+            let op2 = document.getElementById('escolha2').innerHTML = "6";
+            let op3 = document.getElementById('escolha3').innerHTML = "2";
+            let op4 = document.getElementById('escolha4').innerHTML = "7";
         }
 
 
@@ -145,47 +148,47 @@
         function proxQuest2() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "pergunta2";
+            let quest = document.getElementById('pergunta').innerHTML = "Identifique a alternativa em que há um adjetivo:";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "jose";
-            let op2 = document.getElementById('escolha2').innerHTML = "gustavo";
-            let op3 = document.getElementById('escolha3').innerHTML = "neymar";
-            let op4 = document.getElementById('escolha4').innerHTML = "carlos";
+            let op1 = document.getElementById('escolha1').innerHTML = "Chegaram cansados.";
+            let op2 = document.getElementById('escolha2').innerHTML = "Andaram pela cidade.";
+            let op3 = document.getElementById('escolha3').innerHTML = "Falaram com ela.";
+            let op4 = document.getElementById('escolha4').innerHTML = "Correram rápido.";
 
-            
+
         };
 
         function proxQuest3() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "pergunta3";
+            let quest = document.getElementById('pergunta').innerHTML = "Qual é a função principal das enzimas no corpo humano?";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "arnaldo";
-            let op2 = document.getElementById('escolha2').innerHTML = "bernardo";
-            let op3 = document.getElementById('escolha3').innerHTML = "plinio";
-            let op4 = document.getElementById('escolha4').innerHTML = "edvandro";
+            let op1 = document.getElementById('escolha1').innerHTML = "Transportar oxigênio nos glóbulos vermelhos";
+            let op2 = document.getElementById('escolha2').innerHTML = "Controlar a produção de hormônios";
+            let op3 = document.getElementById('escolha3').innerHTML = "Realizar a fotossíntese nas plantas";
+            let op4 = document.getElementById('escolha4').innerHTML = "Facilitar reações químicas, acelerando as taxas de reação";
         };
 
         function proxQuest4() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "pergunta4";
+            let quest = document.getElementById('pergunta').innerHTML = "Qual é o principal pigmento responsável pela fotossíntese nas plantas?";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "gabriel";
-            let op2 = document.getElementById('escolha2').innerHTML = "kiko";
-            let op3 = document.getElementById('escolha3').innerHTML = "edgar";
-            let op4 = document.getElementById('escolha4').innerHTML = "matheus";
+            let op1 = document.getElementById('escolha1').innerHTML = "Clorofila";
+            let op2 = document.getElementById('escolha2').innerHTML = "Melanina";
+            let op3 = document.getElementById('escolha3').innerHTML = "Hemoglobina";
+            let op4 = document.getElementById('escolha4').innerHTML = "Caroteno";
         };
 
         function proxQuest5() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "pergunta5";
+            let quest = document.getElementById('pergunta').innerHTML = "O que é depressão";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "giovanni";
-            let op2 = document.getElementById('escolha2').innerHTML = "galinaceo";
-            let op3 = document.getElementById('escolha3').innerHTML = "luiz";
-            let op4 = document.getElementById('escolha4').innerHTML = "pedro";
+            let op1 = document.getElementById('escolha1').innerHTML = "Uma área baixa cercada por terrenos mais elevados";
+            let op2 = document.getElementById('escolha2').innerHTML = "Uma doença mental";
+            let op3 = document.getElementById('escolha3').innerHTML = "Uma área alta cercada por terrenos mais baixos";
+            let op4 = document.getElementById('escolha4').innerHTML = "JavaScript";
         };
     </script>
 </body>
