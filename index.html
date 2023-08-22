@@ -35,23 +35,25 @@
                 </div>
 
                 <img class="ilustracao" id="exibicao" src="image1.png" alt="">
+
+                <div class="status">
+                    <section class="valores hide">
+                    </section>
+                </div>
             </section>
+
 
             <section class="opcoes">
                 <button class="opc txt" id="escolha1">
-                    <i class="fas fa-flag"></i>
                     <p class="txt espacar">3</p>
                 </button>
                 <button class="opc txt" id="escolha2">
-                    <i class="fas fa-flag"></i>
                     <p class="txt espacar">6</p>
                 </button>
                 <button class="opc txt" id="escolha3">
-                    <i class="fas fa-flag"></i>
                     <p class="txt espacar">2</p>
                 </button>
                 <button class="opc txt" id="escolha4">
-                    <i class="fas fa-flag"></i>
                     <p class="txt espacar">7</p>
                 </button>
             </section>
@@ -64,7 +66,7 @@
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
-        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5'];
+        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png'];
         let images = document.getElementById('exibicao');
         let imagesIndex = 0;
 
@@ -148,12 +150,12 @@
         function proxQuest2() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "Identifique a alternativa em que há um adjetivo:";
+            let quest = document.getElementById('pergunta').innerHTML = "Qual é o principal pigmento responsável pela fotossíntese nas plantas?";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "Chegaram cansados.";
-            let op2 = document.getElementById('escolha2').innerHTML = "Andaram pela cidade.";
-            let op3 = document.getElementById('escolha3').innerHTML = "Falaram com ela.";
-            let op4 = document.getElementById('escolha4').innerHTML = "Correram rápido.";
+            let op1 = document.getElementById('escolha1').innerHTML = "Clorofila";
+            let op2 = document.getElementById('escolha2').innerHTML = "Melanina";
+            let op3 = document.getElementById('escolha3').innerHTML = "Hemoglobina";
+            let op4 = document.getElementById('escolha4').innerHTML = "Caroteno";
 
 
         };
@@ -172,18 +174,18 @@
         function proxQuest4() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "Qual é o principal pigmento responsável pela fotossíntese nas plantas?";
+            let quest = document.getElementById('pergunta').innerHTML = "Identifique a alternativa em que há um adjetivo:";
 
-            let op1 = document.getElementById('escolha1').innerHTML = "Clorofila";
-            let op2 = document.getElementById('escolha2').innerHTML = "Melanina";
-            let op3 = document.getElementById('escolha3').innerHTML = "Hemoglobina";
-            let op4 = document.getElementById('escolha4').innerHTML = "Caroteno";
+            let op1 = document.getElementById('escolha1').innerHTML = "Chegaram cansados.";
+            let op2 = document.getElementById('escolha2').innerHTML = "Andaram pela cidade.";
+            let op3 = document.getElementById('escolha3').innerHTML = "Falaram com ela.";
+            let op4 = document.getElementById('escolha4').innerHTML = "Correram rápido.";
         };
 
         function proxQuest5() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "O que é depressão";
+            let quest = document.getElementById('pergunta').innerHTML = "O que é depressão?";
 
             let op1 = document.getElementById('escolha1').innerHTML = "Uma área baixa cercada por terrenos mais elevados";
             let op2 = document.getElementById('escolha2').innerHTML = "Uma doença mental";
