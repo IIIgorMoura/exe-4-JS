@@ -14,12 +14,27 @@
     <div class="fundo">
         <section class="base">
             <div class="questao">
-                <img class="heart" src="coracao.png" alt="">
-                <div id="vidas">2</div>
-                <h1 id="pergunta">pergunta</h1>
+
+                <h1 class="titulo" id="pergunta">pergunta</h1>
             </div>
 
-            <img class="ilustracao" id="exibicao" src="image1.png" alt="">
+            <section class="alinhamento">
+                <div class="status">
+                    <section class="valores">
+                        <img class="heart" src="coracao.png" alt="">
+                        <br>
+                        <div class="titulo" id="vidas">2</div>
+                    </section>
+
+                    <section class="valores">
+                        <h1 class="titulo" id="pontos">Pontuação:</h1>
+                        <br>
+                        <p class="txt">0</p>
+                    </section>
+                </div>
+
+                <img class="ilustracao" id="exibicao" src="image1.png" alt="">
+            </section>
 
             <section class="opcoes">
                 <button class="opc txt" id="escolha1">1</button>
@@ -31,6 +46,8 @@
     </div>
 
     <script>
+        let pontos = document.getElementById('pontos');
+
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
