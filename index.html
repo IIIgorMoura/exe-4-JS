@@ -8,6 +8,7 @@
     <title>Quiz</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/78f0f143f5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,9 +28,9 @@
                     </section>
 
                     <section class="valores">
-                        <h1 class="titulo" id="pontos">Pontuação:</h1>
+                        <h1 class="titulo">Pontuação:</h1>
                         <br>
-                        <p class="txt">0</p>
+                        <p class="txt" id="pontos">0</p>
                     </section>
                 </div>
 
@@ -37,15 +38,29 @@
             </section>
 
             <section class="opcoes">
-                <button class="opc txt" id="escolha1">1</button>
-                <button class="opc txt" id="escolha2">2</button>
-                <button class="opc txt" id="escolha3">3</button>
-                <button class="opc txt" id="escolha4">4</button>
+                <button class="opc txt" id="escolha1">
+                    <i class="fas fa-flag"></i>
+                    <p class="txt espacar">1</p>
+                </button>
+                <button class="opc txt" id="escolha2">
+                    <i class="fas fa-flag"></i>
+                    <p class="txt espacar">2</p>
+                </button>
+                <button class="opc txt" id="escolha3">
+                    <i class="fas fa-flag"></i>
+                    <p class="txt espacar">3</p>
+                </button>
+                <button class="opc txt" id="escolha4">
+                    <i class="fas fa-flag"></i>
+                    <p class="txt espacar">4</p>
+                </button>
             </section>
         </section>
     </div>
 
     <script>
+        pontos = 0;
+
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
@@ -63,6 +78,9 @@
         op1.addEventListener("click", () => {
             i++;
             imagesIndex++;
+
+            pontos += 10;
+            document.getElementById('pontos').innerHTML = pontos;
 
             if (i === 1) {
                 proxQuest2();
@@ -133,6 +151,8 @@
             let op2 = document.getElementById('escolha2').innerHTML = "gustavo";
             let op3 = document.getElementById('escolha3').innerHTML = "neymar";
             let op4 = document.getElementById('escolha4').innerHTML = "carlos";
+
+            
         };
 
         function proxQuest3() {
