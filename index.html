@@ -46,14 +46,14 @@
     </div>
 
     <script>
-        let pontos = document.getElementById('pontos');
-
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
-        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png'];
+        const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5'];
         let images = document.getElementById('exibicao');
         let imagesIndex = 0;
+
+        let quest = document.getElementById('pergunta');
 
         let op1 = document.getElementById('escolha1');
         let op2 = document.getElementById('escolha2');
@@ -114,6 +114,8 @@
             chances += 2;
             document.getElementById('vidas').innerHTML = chances;
 
+            let quest = document.getElementById('pergunta').innerHTML = "pergunta1";
+
             let op1 = document.getElementById('escolha1').innerHTML = "1";
             let op2 = document.getElementById('escolha2').innerHTML = "2";
             let op3 = document.getElementById('escolha3').innerHTML = "3";
@@ -125,6 +127,8 @@
         function proxQuest2() {
             images.src = IMAGENS[imagesIndex];
 
+            let quest = document.getElementById('pergunta').innerHTML = "pergunta2";
+
             let op1 = document.getElementById('escolha1').innerHTML = "jose";
             let op2 = document.getElementById('escolha2').innerHTML = "gustavo";
             let op3 = document.getElementById('escolha3').innerHTML = "neymar";
@@ -133,6 +137,8 @@
 
         function proxQuest3() {
             images.src = IMAGENS[imagesIndex];
+
+            let quest = document.getElementById('pergunta').innerHTML = "pergunta3";
 
             let op1 = document.getElementById('escolha1').innerHTML = "arnaldo";
             let op2 = document.getElementById('escolha2').innerHTML = "bernardo";
@@ -143,6 +149,8 @@
         function proxQuest4() {
             images.src = IMAGENS[imagesIndex];
 
+            let quest = document.getElementById('pergunta').innerHTML = "pergunta4";
+
             let op1 = document.getElementById('escolha1').innerHTML = "gabriel";
             let op2 = document.getElementById('escolha2').innerHTML = "kiko";
             let op3 = document.getElementById('escolha3').innerHTML = "edgar";
@@ -151,6 +159,8 @@
 
         function proxQuest5() {
             images.src = IMAGENS[imagesIndex];
+
+            let quest = document.getElementById('pergunta').innerHTML = "pergunta5";
 
             let op1 = document.getElementById('escolha1').innerHTML = "giovanni";
             let op2 = document.getElementById('escolha2').innerHTML = "galinaceo";
