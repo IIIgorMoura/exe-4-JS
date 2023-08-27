@@ -15,8 +15,12 @@
     src: url(font/Poppins-Light.ttf);
 }
 
+body {
+    background-color: var(--corFundo);
+}
+
 :root {
-    --corFundo: #6300c5;
+    --corFundo: #430086;
     --corBranco: #fff;
     --quest1: #db1a1a;
     --quest2: #401fd3;
@@ -28,7 +32,7 @@
 .questao {
     display: flex;
 
-    width: 1200px;
+    width: 100vw;
     height: 90px;
 
     align-items: center;
