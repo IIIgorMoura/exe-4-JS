@@ -168,6 +168,10 @@ body {
 .espacar {
     margin: 0px 10px;
 }
+
+.fa-heart {
+    color: var(--quest1);
+}
 /* fim base */
 /* caixa */
 
