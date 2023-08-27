@@ -1,10 +1,31 @@
-/* base */
+/* BASE */
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --corFundo: #430086;
+    --corBranco: #fff;
+    --quest1: #db1a1a;
+    --quest2: #401fd3;
+    --quest3: #28e122;
+    --quest4: #d0a60f;
+}
+
+/* telas */
+#jogo {
+    display: flex;
+}
+
+#menu {
+    display: none;
+}
+/* fim telas */
+/* fim reset */
+/* texto */
 @font-face {
     font-family: "poppinsTitulo";
     src: url(font/Poppins-Bold.ttf);
@@ -15,18 +36,49 @@
     src: url(font/Poppins-Light.ttf);
 }
 
+.titulo {
+    font: 600 20px "poppinsTitulo";
+}
+
+.txt {
+    font: 600 15px "poppinsTxt";
+}
+/* fim texto */
+
 body {
     background-color: var(--corFundo);
 }
 
-:root {
-    --corFundo: #430086;
-    --corBranco: #fff;
-    --quest1: #db1a1a;
-    --quest2: #401fd3;
-    --quest3: #28e122;
-    --quest4: #d0a60f;
+.fundo {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
 
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* FIM BASE */
+/* jogo */
+.base {
+    display: flex;
+    width: 1200px;
+    height: 750px;
+
+    background-color: var(--corFundo);
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.alinhamento {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .questao {
@@ -42,36 +94,7 @@ body {
 
     margin: 25px 0px;
 }
-.titulo {
-    font: 600 20px "poppinsTitulo";
-}
-
-.txt {
-    font: 600 15px "poppinsTxt";
-}
-/* fim base */
-
-.fundo {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.base {
-    display: flex;
-    width: 1200px;
-    height: 750px;
-
-    background-color: var(--corFundo);
-
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
+/* fundoRespostas */
 #opcoes {
     display: flex;
     width: 1100px;
@@ -83,7 +106,8 @@ body {
 
     margin: 25px 0px;
 }
-
+/* fim fundoRespostas */
+/* respostas */
 .opc {
     display: flex;
 
@@ -121,26 +145,10 @@ body {
 .opc:hover {
     transform: scale(1.05);
 }
+/* fim respostas */
+/* status */
 #vidas {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.heart {
-    display: flex;
-    width: 70px;
-    height: 70px;
-}
-
-.ilustracao {
-    width: 500px;
-    height: 400px;
-}
-
-.alinhamento {
-    display: flex;
-
     align-items: center;
     justify-content: center;
 }
@@ -160,6 +168,17 @@ body {
 
     margin: 10px 100px;
 }
+/* fim status */
+/* imagem */
+.ilustracao {
+    width: 500px;
+    height: 400px;
+}
+/* fim imagem */
+
+
+
+
 
 .hide {
     background-color: var(--corFundo);

@@ -13,7 +13,10 @@
 
 <body>
     <div class="fundo">
-        <section class="base">
+
+        <!-- JOGO -->
+
+        <section class="base" id="jogo">
             <div class="questao">
 
                 <h1 class="titulo" id="pergunta">Na equação: x2 + 13 = 19, qual o valor de X?</h1>
@@ -58,7 +61,22 @@
                 </button>
             </section>
         </section>
+
+
+        <!-- fim JOGO -->
+
+        <!-- MENU -->
+
+        <section id="menu">
+            <h1 id="revelacao">
+
+            </h1>
+        </section>
+
+        <!-- fim MENU -->
     </div>
+
+    <!-- scriptJS -->
 
     <script>
         pontos = 0;
@@ -93,6 +111,11 @@
             } else if (i === 4) {
                 proxQuest5();
             };
+
+
+            if (pontos === 50) {
+                menu();
+            }
         });
 
 
@@ -103,7 +126,7 @@
             document.getElementById('vidas').innerHTML = chances;
 
             if (chances < 1) {
-                reset();
+                menu();
             }
         });
 
@@ -112,7 +135,7 @@
             document.getElementById('vidas').innerHTML = chances;
 
             if (chances < 1) {
-                reset();
+                menu();
             }
         });
 
@@ -121,32 +144,11 @@
             document.getElementById('vidas').innerHTML = chances;
 
             if (chances < 1) {
-                reset();
+                menu();
             }
         });
 
-        function reset() {
-            imagesIndex = 0;
-            images.src = IMAGENS[imagesIndex];
 
-            i = 0;
-
-            chances += 2;
-            document.getElementById('vidas').innerHTML = chances;
-
-            pontos = 0;
-            document.getElementById('pontos').innerHTML = pontos;
-
-            let quest = document.getElementById('pergunta').innerHTML = "Na equação: x2 + 13 = 19, qual o valor de X?";
-
-            let op1 = document.getElementById('escolha1').innerHTML = "3";
-            let op2 = document.getElementById('escolha2').innerHTML = "6";
-            let op3 = document.getElementById('escolha3').innerHTML = "2";
-            let op4 = document.getElementById('escolha4').innerHTML = "7";
-
-            let posicao = document.getElementById('opcoes');
-            posicao.style.flexDirection = 'row';
-        }
 
 
 
@@ -205,7 +207,57 @@
             let posicao = document.getElementById('opcoes');
             posicao.style.flexDirection = 'row';
         };
+
+
+
+        function menu() {
+            let jogo = document.getElementById('jogo');
+            jogo.style.display = "none";
+
+            let restartMenu = document.getElementById('menu');
+            restartMenu.style.display = "flex";
+
+            let conclusão = document.getElementById('revelacao')
+
+            if (pontos === 50) {
+                conclusão = document.getElementById('revelacao').innerHTML = "PARABÉNS, VOCÊ... PARABÉNS!"
+            };
+
+            if (chances === 0) {
+                conclusão = document.getElementById('revelacao').innerHTML = "BURRO BURRO BURRO";
+            };
+        };
+
+
+        function reiniciar() {
+
+        }
+
+        function reset() {
+            imagesIndex = 0;
+            images.src = IMAGENS[imagesIndex];
+
+            i = 0;
+
+            chances += 2;
+            document.getElementById('vidas').innerHTML = chances;
+
+            pontos = 0;
+            document.getElementById('pontos').innerHTML = pontos;
+
+            let quest = document.getElementById('pergunta').innerHTML = "Na equação: x2 + 13 = 19, qual o valor de X?";
+
+            let op1 = document.getElementById('escolha1').innerHTML = "3";
+            let op2 = document.getElementById('escolha2').innerHTML = "6";
+            let op3 = document.getElementById('escolha3').innerHTML = "2";
+            let op4 = document.getElementById('escolha4').innerHTML = "7";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'row';
+        }
+
     </script>
+    <!-- fim scriptJS -->
 </body>
 
 </html>
