@@ -15,7 +15,6 @@
     <div class="fundo">
 
         <!-- JOGO -->
-
         <section class="base" id="jogo">
             <div class="questao">
 
@@ -61,8 +60,6 @@
                 </button>
             </section>
         </section>
-
-
         <!-- fim JOGO -->
 
         <!-- MENU -->
@@ -79,22 +76,31 @@
     <!-- scriptJS -->
 
     <script>
+        // status
         pontos = 0;
+        let chances = 2;
+        // fim status
 
+        // index
         const index = ["Questão 1", "Questão 2", "Questão 3", "Questão 4", "Questão 5"];
         let i = 0;
 
         const IMAGENS = ['image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png'];
         let images = document.getElementById('exibicao');
         let imagesIndex = 0;
+        // fim index
 
+        // quizElements
         let quest = document.getElementById('pergunta');
 
         let op1 = document.getElementById('escolha1');
         let op2 = document.getElementById('escolha2');
         let op3 = document.getElementById('escolha3');
         let op4 = document.getElementById('escolha4');
+        // fim quizElements
 
+        // OPCOES
+        // opcCorreta
         op1.addEventListener("click", () => {
             i++;
             imagesIndex++;
@@ -117,10 +123,11 @@
                 menu();
             }
         });
+        // fim opcCorreta
 
 
-        let chances = 2;
 
+        // opcIncorretas
         op2.addEventListener("click", () => {
             chances--;
             document.getElementById('vidas').innerHTML = chances;
@@ -147,11 +154,11 @@
                 menu();
             }
         });
+        // fim opcIncorretas
+        // fim OPCOES
 
 
-
-
-
+        // funcoesProxQuestao
         function proxQuest2() {
             images.src = IMAGENS[imagesIndex];
 
@@ -207,9 +214,10 @@
             let posicao = document.getElementById('opcoes');
             posicao.style.flexDirection = 'row';
         };
+        // fim funcoesProxQuestao
 
 
-
+        // MENU
         function menu() {
             let jogo = document.getElementById('jogo');
             jogo.style.display = "none";
@@ -228,11 +236,13 @@
             };
         };
 
-
+        // botaoReset
         function reiniciar() {
 
         }
 
+        // fim botaoReset
+        // resetJogo
         function reset() {
             imagesIndex = 0;
             images.src = IMAGENS[imagesIndex];
@@ -255,6 +265,8 @@
             let posicao = document.getElementById('opcoes');
             posicao.style.flexDirection = 'row';
         }
+        // fim resetJogo
+        // fim MENU
 
     </script>
     <!-- fim scriptJS -->
