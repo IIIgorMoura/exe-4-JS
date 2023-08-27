@@ -43,7 +43,7 @@
             </section>
 
 
-            <section class="opcoes">
+            <section id="opcoes">
                 <button class="opc txt" id="escolha1">
                     <p class="txt espacar">3</p>
                 </button>
@@ -143,6 +143,9 @@
             let op2 = document.getElementById('escolha2').innerHTML = "6";
             let op3 = document.getElementById('escolha3').innerHTML = "2";
             let op4 = document.getElementById('escolha4').innerHTML = "7";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'row';
         }
 
 
@@ -157,7 +160,8 @@
             let op3 = document.getElementById('escolha3').innerHTML = "Hemoglobina";
             let op4 = document.getElementById('escolha4').innerHTML = "Caroteno";
 
-            
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'column-reverse';
         };
 
         function proxQuest3() {
@@ -169,6 +173,9 @@
             let op2 = document.getElementById('escolha2').innerHTML = "Controlar a produção de hormônios";
             let op3 = document.getElementById('escolha3').innerHTML = "Realizar a fotossíntese nas plantas";
             let op4 = document.getElementById('escolha4').innerHTML = "Facilitar reações químicas, acelerando as taxas de reação";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'column';
         };
 
         function proxQuest4() {
@@ -180,6 +187,9 @@
             let op2 = document.getElementById('escolha2').innerHTML = "Andaram pela cidade.";
             let op3 = document.getElementById('escolha3').innerHTML = "Falaram com ela.";
             let op4 = document.getElementById('escolha4').innerHTML = "Correram rápido.";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'row';
         };
 
         function proxQuest5() {
@@ -191,6 +201,9 @@
             let op2 = document.getElementById('escolha2').innerHTML = "Uma doença mental";
             let op3 = document.getElementById('escolha3').innerHTML = "Uma área alta cercada por terrenos mais baixos";
             let op4 = document.getElementById('escolha4').innerHTML = "JavaScript";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'row-reverse';
         };
     </script>
 </body>
