@@ -65,16 +65,16 @@
         <!-- MENU -->
 
         <section id="menu">
-            <h1 class="titulo" id="revelacao">
+            <h1 class="titulo" id="revelacao"></h1>
 
-            </h1>
+            <button class="opc" onclick="reiniciar()"></button>
         </section>
 
         <!-- fim MENU -->
     </div>
+    <!-- fim HTML -->
 
     <!-- scriptJS -->
-
     <script>
         // status
         pontos = 0;
@@ -238,10 +238,17 @@
 
         // botaoReset
         function reiniciar() {
+            let jogo = document.getElementById('jogo');
+            jogo.style.display = "flex";
 
-        }
+            let restartMenu = document.getElementById('menu');
+            restartMenu.style.display = "none";
+
+            reset();
+        };
 
         // fim botaoReset
+
         // resetJogo
         function reset() {
             imagesIndex = 0;
@@ -264,7 +271,7 @@
 
             let posicao = document.getElementById('opcoes');
             posicao.style.flexDirection = 'row';
-        }
+        };
         // fim resetJogo
         // fim MENU
 
