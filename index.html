@@ -137,7 +137,7 @@
             pontos = 0;
             document.getElementById('pontos').innerHTML = pontos;
 
-            let quest = document.getElementById('pergunta').innerHTML = "Na equação: 2x + 13 = 19, qual o valor de X?";
+            let quest = document.getElementById('pergunta').innerHTML = "Na equação: x2 + 13 = 19, qual o valor de X?";
 
             let op1 = document.getElementById('escolha1').innerHTML = "3";
             let op2 = document.getElementById('escolha2').innerHTML = "6";
@@ -167,6 +167,22 @@
         function proxQuest3() {
             images.src = IMAGENS[imagesIndex];
 
+            let quest = document.getElementById('pergunta').innerHTML = "O que é depressão?";
+
+            let op1 = document.getElementById('escolha1').innerHTML = "Uma área baixa cercada por terrenos mais elevados";
+            let op2 = document.getElementById('escolha2').innerHTML = "Uma doença mental";
+            let op3 = document.getElementById('escolha3').innerHTML = "Uma área alta cercada por terrenos mais baixos";
+            let op4 = document.getElementById('escolha4').innerHTML = "JavaScript";
+
+            let posicao = document.getElementById('opcoes');
+            posicao.style.flexDirection = 'row-reverse';
+        };
+
+
+
+        function proxQuest4() {
+            images.src = IMAGENS[imagesIndex];
+
             let quest = document.getElementById('pergunta').innerHTML = "Qual é a função principal das enzimas no corpo humano?";
 
             let op1 = document.getElementById('escolha1').innerHTML = "Transportar oxigênio nos glóbulos vermelhos";
@@ -178,32 +194,18 @@
             posicao.style.flexDirection = 'column';
         };
 
-        function proxQuest4() {
-            images.src = IMAGENS[imagesIndex];
-
-            let quest = document.getElementById('pergunta').innerHTML = "Identifique a alternativa em que há um adjetivo:";
-
-            let op1 = document.getElementById('escolha1').innerHTML = "Chegaram cansados.";
-            let op2 = document.getElementById('escolha2').innerHTML = "Andaram pela cidade.";
-            let op3 = document.getElementById('escolha3').innerHTML = "Falaram com ela.";
-            let op4 = document.getElementById('escolha4').innerHTML = "Correram rápido.";
-
-            let posicao = document.getElementById('opcoes');
-            posicao.style.flexDirection = 'row';
-        };
-
         function proxQuest5() {
             images.src = IMAGENS[imagesIndex];
 
-            let quest = document.getElementById('pergunta').innerHTML = "O que é depressão?";
+            let quest = document.getElementById('pergunta').innerHTML = 'Matheus assistiu "X" videos, cada vídeo tem 3 minutos, em 30 minutos, quantos videos ele assistiu?';
 
-            let op1 = document.getElementById('escolha1').innerHTML = "Uma área baixa cercada por terrenos mais elevados";
-            let op2 = document.getElementById('escolha2').innerHTML = "Uma doença mental";
-            let op3 = document.getElementById('escolha3').innerHTML = "Uma área alta cercada por terrenos mais baixos";
-            let op4 = document.getElementById('escolha4').innerHTML = "JavaScript";
+            let op1 = document.getElementById('escolha1').innerHTML = "10 vídeos";
+            let op2 = document.getElementById('escolha2').innerHTML = "3 vídeos";
+            let op3 = document.getElementById('escolha3').innerHTML = "15 vídeos";
+            let op4 = document.getElementById('escolha4').innerHTML = "90 vídeos";
 
             let posicao = document.getElementById('opcoes');
-            posicao.style.flexDirection = 'row-reverse';
+            posicao.style.flexDirection = 'row';
         };
     </script>
 </body>
