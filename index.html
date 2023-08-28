@@ -64,10 +64,17 @@
 
         <!-- MENU -->
 
-        <section id="menu">
+        <section class="base" id="menu">
             <h1 class="titulo" id="revelacao"></h1>
 
-            <button class="opc" onclick="reiniciar()"></button>
+            <div class="test">
+                <img src="errado.gif" class="ilustracao espacar" id="finalImage" alt="">
+            </div>
+
+            <button class="opc titulo" id="resetarClick" onclick="reiniciar()">
+                <i class="fa-solid fa-rotate-right fa-2x"></i>
+                <h1 id="espacoBotao">Reiniciar</h1>
+            </button>
         </section>
 
         <!-- fim MENU -->
@@ -225,14 +232,18 @@
             let restartMenu = document.getElementById('menu');
             restartMenu.style.display = "flex";
 
+            let gif = document.getElementById('finalImage');
+
             let conclusão = document.getElementById('revelacao')
 
             if (pontos === 50) {
-                conclusão = document.getElementById('revelacao').innerHTML = "PARABÉNS, VOCÊ É DEFINITIVAMENTE É UM SER HUMANO!"
+                conclusão = document.getElementById('revelacao').innerHTML = "PARABÉNS, VOCÊ CONSEGUIU!"
+                gif.src = "certo.gif"
             };
 
             if (chances === 0) {
-                conclusão = document.getElementById('revelacao').innerHTML = "BURRO BURRO BURRO";
+                conclusão = document.getElementById('revelacao').innerHTML = "TENTE NOVAMENTE!";
+                gif.src = "errado.gif"
             };
         };
 
@@ -256,7 +267,8 @@
 
             i = 0;
 
-            chances += 2;
+            chances = 2;
+
             document.getElementById('vidas').innerHTML = chances;
 
             pontos = 0;
