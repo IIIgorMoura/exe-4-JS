@@ -192,23 +192,15 @@ body {
 /* fim imagem */
 /* fim JOGO */
 /* MENU */
+/* titulo */
 #revelacao {
     font: 1000 50px "poppinsTitulo";
     color: var(--corBranco);
 
     margin: 25px;
 }
-
-#resetarClick {
-    background-color: var(--corFundo);
-    border: 5px solid var(--corBranco);
-    margin: 50px 0px;
-}
-
-#espacoBotao {
-    margin: 0px 20px;
-}
-
+/* fim titulo */
+/* gif */
 .test {
     background-color: var(--corBranco);
 
@@ -218,4 +210,16 @@ body {
 
     width: 100vw;
 }
+/* fim gif */
+/* botaoRestart */
+#resetarClick {
+    background-color: var(--corFundo);
+    border: 5px solid var(--corBranco);
+    margin: 50px 0px;
+}
+
+#espacoBotao {
+    margin: 0px 20px;
+}
+/* fim botaoRestart */
 /* fim MENU */
